@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PokemonCards from './PokemonCards';
-import Pokemonlist from './PokemonList';
+
 
 const Pokemon = () => {
     const [pokemon, setPokemon] = useState([]);
@@ -58,7 +58,7 @@ const Pokemon = () => {
                 <div className='pt-3'>
                     <input 
                         type="text" 
-                        placeholder='Search Pokémon' 
+                        placeholder='Search Pokemon' 
                         value={search} 
                         onChange={(e) => setSearch(e.target.value)}
                         className='w-[300px] sm:w-[400px] h-[50px] rounded-2xl border-3 border-red-500 text-xl outline-none text-white placeholder-gray-500'
