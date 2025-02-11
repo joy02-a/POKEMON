@@ -1,14 +1,16 @@
 import React from 'react'
-
+// import PokemonList from './PokemonList'
 const PokemonCards = ({pokemondata}) => {
   return (
-    <li className='border-4 h-[450px] w-[300px] flex flex-col items-center bg-pink-700'>
+    <li className='border-4 h-[450px] w-[300px] flex flex-col items-center bg-white'>
         <figure >
-            <img src={pokemondata.sprites.other.dream_world.front_default} alt={pokemondata.name} className='h-[200px]'/>
+            
+            <img src={pokemondata.sprites.other.dream_world.front_default} alt={pokemondata.name} className='h-[200px] cursor-pointer'/>
+            
         </figure>
         <h1 className='font-bold text-2xl pt-4'> {pokemondata.name} </h1>
         <div>
-            <p className='border-3 bg-green-600 text-white p-2 mt-4 rounded-2xl'>
+            <p className='border-3 w-[120px] text-center bg-green-600 text-white p-2 mt-4 rounded-2xl'>
                 {
                     pokemondata.types.map((curType)=>curType.type.name).join(", ")
                 }
